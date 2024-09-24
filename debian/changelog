@@ -1,5 +1,297 @@
-template-repository (1.0-1) unstable; urgency=medium
+trace-cmd (3.3-2) unstable; urgency=medium
 
-  * Initial release
+  * Add new package for Python bindings.
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Sudip Mukherjee <sudipm.mukherjee@gmail.com>  Sat, 17 Aug 2024 00:03:03 +0100
+
+trace-cmd (3.3-1) unstable; urgency=medium
+
+  * New upstream version 3.3
+    - Update symbols.
+  * Move Vcs to salsa.
+    - Enable CI in salsa.
+  * Add versioned dependency of libtraceevent-dev and libtracefs-dev.
+  * Update Standards-Version to 4.7.0
+    - No change needed.
+  * Depend on pkgconf instead of pkg-config.
+
+ -- Sudip Mukherjee <sudipm.mukherjee@gmail.com>  Fri, 09 Aug 2024 19:56:08 +0100
+
+trace-cmd (3.2-1) unstable; urgency=medium
+
+  [ Debian Janitor ]
+  * Apply multi-arch hints. + libtracecmd1: Add Multi-Arch: same.
+
+  [ Sudip Mukherjee ]
+  * New upstream version 3.2
+    - Update copyright.
+    - Update symbols.
+
+ -- Sudip Mukherjee <sudipm.mukherjee@gmail.com>  Mon, 03 Jul 2023 20:29:04 +0100
+
+trace-cmd (3.1.6-1) unstable; urgency=medium
+
+  * New upstream version 3.1.6
+    - Update symbols.
+  * Update Standards-Version to 4.6.2
+
+ -- Sudip Mukherjee <sudipm.mukherjee@gmail.com>  Sun, 22 Jan 2023 00:22:02 +0000
+
+trace-cmd (3.1.4-1) unstable; urgency=medium
+
+  * Update to upstream v3.1.4
+    - Update symbols.
+    - Update copyright.
+  * Update Standards-Version to 4.6.1.0.
+
+ -- Sudip Mukherjee <sudipm.mukherjee@gmail.com>  Sun, 16 Oct 2022 22:17:55 +0100
+
+trace-cmd (3.1-1) unstable; urgency=medium
+
+  * Update to upstream v3.1
+    - Remove upstream patch.
+    - Update copyright.
+    - Update symbols.
+
+ -- Sudip Mukherjee <sudipm.mukherjee@gmail.com>  Thu, 09 Jun 2022 21:48:45 +0100
+
+trace-cmd (3.0.3-3) unstable; urgency=medium
+
+  * Upload to unstable.
+
+ -- Sudip Mukherjee <sudipm.mukherjee@gmail.com>  Tue, 17 May 2022 09:23:55 +0100
+
+trace-cmd (3.0.3-2) experimental; urgency=medium
+
+  * Add upstream patch to fix build.
+
+ -- Sudip Mukherjee <sudipm.mukherjee@gmail.com>  Thu, 12 May 2022 22:20:36 +0100
+
+trace-cmd (3.0.3-1) experimental; urgency=medium
+
+  * Update to upstream v3.0.3
+    - Update doc path.
+    - Add symbols.
+    - Update soname.
+    - Update copyright.
+    - Remove patches.
+
+ -- Sudip Mukherjee <sudipm.mukherjee@gmail.com>  Sun, 01 May 2022 01:11:55 +0100
+
+trace-cmd (2.9.6-2) unstable; urgency=medium
+
+  * Modify autopkgtest.
+    - Only use list, record needs write permission to /sys/kernel/tracing
+
+ -- Sudip Mukherjee <sudipm.mukherjee@gmail.com>  Thu, 23 Dec 2021 18:05:01 +0000
+
+trace-cmd (2.9.6-1) unstable; urgency=medium
+
+  * Update to upstream v2.9.6
+  * Build using packaged libtraceevent and libtracefs.
+  * Remove remaining dependencies of kernelshark.
+  * Add autopkgtest.
+
+ -- Sudip Mukherjee <sudipm.mukherjee@gmail.com>  Tue, 21 Dec 2021 21:40:45 +0000
+
+trace-cmd (2.9.3-4) unstable; urgency=medium
+
+  * Remove kernelshark
+  * Update Standards-Version to 4.6.0.1
+  * Add missing libraries. (Closes: #999641)
+
+ -- Sudip Mukherjee <sudipm.mukherjee@gmail.com>  Sat, 04 Dec 2021 19:54:06 +0000
+
+trace-cmd (2.9.3-3) unstable; urgency=medium
+
+  * Upload to unstable.
+  * Update Standards-Version to 4.5.1
+
+ -- Sudip Mukherjee <sudipm.mukherjee@gmail.com>  Mon, 16 Aug 2021 21:16:54 +0100
+
+trace-cmd (2.9.3-2) experimental; urgency=medium
+
+  * Build binary package for libtracecmd.
+  * Fix path for libraries and documentation.
+  * Update copyright.
+
+ -- Sudip Mukherjee <sudipm.mukherjee@gmail.com>  Sun, 06 Jun 2021 23:03:31 +0100
+
+trace-cmd (2.9.3-1) experimental; urgency=medium
+
+  * Update to upstream v2.9.3
+
+ -- Sudip Mukherjee <sudipm.mukherjee@gmail.com>  Sun, 23 May 2021 15:37:09 +0100
+
+trace-cmd (2.9.2-1) experimental; urgency=medium
+
+  * Update to upstream v2.9.2
+  * Fix bash-completion path. (Closes: #984959)
+
+ -- Sudip Mukherjee <sudipm.mukherjee@gmail.com>  Sun, 11 Apr 2021 17:15:55 +0100
+
+trace-cmd (2.9.1-1) unstable; urgency=medium
+
+  * Update to upstream v2.9.1
+    - New version has updated manpages. (LP: #1868900)
+
+ -- Sudip Mukherjee <sudipm.mukherjee@gmail.com>  Wed, 19 Aug 2020 20:51:17 +0100
+
+trace-cmd (2.8.3-7) unstable; urgency=medium
+
+  * Update compat level to 13.
+  * Fix FTBFS with gcc-10. (Closes: #957879)
+
+ -- Sudip Mukherjee <sudipm.mukherjee@gmail.com>  Fri, 15 May 2020 23:42:36 +0100
+
+trace-cmd (2.8.3-6) unstable; urgency=medium
+
+  * Fix SIGSEGV with Kernelshark. (Closes: #955527)
+  * Use secure copyright format uri.
+
+ -- Sudip Mukherjee <sudipm.mukherjee@gmail.com>  Tue, 14 Apr 2020 19:16:58 +0100
+
+trace-cmd (2.8.3-5) unstable; urgency=medium
+
+  * Remove dependency on cdbs.
+  * Update Standards-Version to 4.5.0.
+  * Add a missing build dependency.
+    - kernelshark was unable to capture trace.
+
+ -- Sudip Mukherjee <sudipm.mukherjee@gmail.com>  Sat, 29 Feb 2020 20:02:10 +0000
+
+trace-cmd (2.8.3-4) unstable; urgency=medium
+
+  * Add dependency for mipsel
+
+ -- Sudip Mukherjee <sudipm.mukherjee@gmail.com>  Wed, 25 Dec 2019 18:59:32 +0000
+
+trace-cmd (2.8.3-3) unstable; urgency=medium
+
+  * Fix FTCBFS, thanks to Helmut Grohne. (Closes: #946296)
+
+ -- Sudip Mukherjee <sudipm.mukherjee@gmail.com>  Sun, 22 Dec 2019 22:43:33 +0000
+
+trace-cmd (2.8.3-2) unstable; urgency=medium
+
+  * build should be verbose by default (Closes: #946067)
+  * Add the watch file
+
+ -- Sudip Mukherjee <sudipm.mukherjee@gmail.com>  Wed, 04 Dec 2019 21:32:41 +0000
+
+trace-cmd (2.8.3-1) unstable; urgency=medium
+
+  * Update to upstream v2.8.3 and change maintainer (Closes: #943551)
+
+ -- Sudip Mukherjee <sudipm.mukherjee@gmail.com>  Mon, 04 Nov 2019 12:44:42 +0000
+
+trace-cmd (2.6.1-0.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Update to v2.6.1:
+    Fixs segfault while processing certain trace files (Closes: #867440).
+
+ -- Sebastian Andrzej Siewior <sebastian@breakpoint.cc>  Tue, 12 Sep 2017 21:50:27 +0200
+
+trace-cmd (2.6-0.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * New upstream release
+  * Build-depend on dh-python
+  * Bump standards-version to 3.9.8 (no change needed)
+
+ -- Javi Merino <vicho@debian.org>  Sun, 17 Jul 2016 13:40:44 +0100
+
+trace-cmd (2.5.3-1) unstable; urgency=medium
+
+  * Bump Standards-Version to 3.9.6
+  * Update to upstream 2.5.3 release
+
+ -- Seth Forshee <seth.forshee@canonical.com>  Mon, 09 Mar 2015 09:30:02 -0500
+
+trace-cmd (2.5.1-1) unstable; urgency=medium
+
+  * Update to upstream 2.5.1 release
+  * Drop 0001-trace-cmd-Add-missing-mode-to-open-call.patch as it is
+    included in the new upstream release
+
+ -- Seth Forshee <seth.forshee@canonical.com>  Thu, 05 Feb 2015 08:19:04 -0600
+
+trace-cmd (2.4.0-1) unstable; urgency=medium
+
+  * Update to upstream 2.4 release
+  * debian/patches/0001-trace-cmd-Add-missing-mode-to-open-call.patch:
+    Fix error caused by missing mode argument to open(2) with O_CREAT
+  * debian/patches/0002-trace-cmd-Use-python2.7-for-executable-name.patch:
+    Workaround for lintian python-script-but-no-python-dep error
+
+ -- Seth Forshee <seth.forshee@canonical.com>  Thu, 19 Jun 2014 15:34:11 -0500
+
+trace-cmd (2.3.2-1) unstable; urgency=medium
+
+  * Update to upstream 2.3.2 release
+
+ -- Seth Forshee <seth.forshee@canonical.com>  Mon, 10 Mar 2014 06:40:43 -0500
+
+trace-cmd (2.3.1-1) unstable; urgency=medium
+
+  * Update to upstream 2.3.1 release
+
+ -- Seth Forshee <seth.forshee@canonical.com>  Tue, 28 Jan 2014 09:35:24 +0000
+
+trace-cmd (2.3.0-1) unstable; urgency=low
+
+  * Update to 2.3.0 release
+  * Remove all patches as they have been incorported into the new
+    upstream release
+
+ -- Seth Forshee <seth.forshee@canonical.com>  Mon, 06 Jan 2014 14:58:48 -0600
+
+trace-cmd (2.2.1-2) unstable; urgency=low
+
+  * debian/patches/0001-trace-cmd-Make-_GNU_SOURCE-always-defined.patch:
+    Use this upstream fix instead of
+    debian/patches/0001-trace-cmd-listen-Remove-use-of-sighandler_t.patch
+  * debian/patches/0006-Makefile-Ensure-_GNU_SOURCE-really-is-always-defined.patch:
+    Ensure _GNU_SOURCE is set in the case of CFLAGS being provided via a
+    command argument
+  * Change architecture to linux-any as this package won't work with
+    any other kernels.
+  * Bump Standards-Version to 3.9.5
+  * debian/patches/0007-Makefile-Use-CPPFLAGS-from-the-environment.patch:
+    Use CPPFLAGS from the environment
+
+ -- Seth Forshee <seth.forshee@canonical.com>  Fri, 13 Dec 2013 20:08:28 -0600
+
+trace-cmd (2.2.1-1) unstable; urgency=low
+
+  * Update to 2.2.1 upstream release
+  * debian/patches/0001-trace-cmd-listen-Remove-use-of-sighandler_t.patch:
+    Fix build error due to sigaction_t being undefined
+  * 0002-build-Install-data-files-without-execute-permissions.patch: Fix
+    lintian executable-not-elf-or-script warnings
+  * debian/patches/0003-Add-missing-libgen.h-includes.patch: Fix segfaults
+    caused by missing libgen.h includes
+  * debian/patches/0004-Documentation-Add-kernelshark.1.txt.patch: Add man
+    page for kernelshark
+  * Update kernelshark.install to include kernelshark docs
+  * debian/patches/0005-Makefile-Use-CFLAGS-and-LDFLAGS-when-building-python.patch:
+    Fix lintian hardening-no-relro warnings
+  * Bump standards version to 3.9.4
+  * Add myself and Kamal Mostafa as uploaders
+  * First Debian release (Closes: #691502)
+
+ -- Seth Forshee <seth.forshee@canonical.com>  Wed, 23 Oct 2013 11:11:32 -0500
+
+trace-cmd (1.0.3-0ubuntu2) precise; urgency=low
+
+  * No-change rebuild to drop spurious libsfgcc1 dependency on armhf.
+
+ -- Adam Conrad <adconrad@0c3.net>  Fri, 02 Dec 2011 21:28:42 -0700
+
+trace-cmd (1.0.3-0ubuntu1) maverick; urgency=low
+
+  * Initial release.
+    - LP: #593343
+
+ -- Chase Douglas <chase.douglas@canonical.com>  Thu, 10 Jun 2010 14:59:05 -0400
