@@ -1,0 +1,2 @@
+usr/lib/*/trace-cmd/python/*.so usr/lib/python3/dist-packages
+usr/lib/*/trace-cmd/python/tracecmd.py usr/bin

@@ -1,0 +1,26 @@
+Description: Fix python bindings
+
+Author: Sudip Mukherjee <sudipm.mukherjee@gmail.com>
+Last-Update: 2024-08-16
+---
+
+--- trace-cmd-3.3.orig/python/Makefile
++++ trace-cmd-3.3/python/Makefile
+@@ -13,8 +13,8 @@ ctracecmd.so: ctracecmd.i $(LIBTRACECMD_
+ 		-I$(src)/include/trace-cmd -I$(src)/lib/trace-cmd/include/private \
+ 		$(LIBTRACEEVENT_CFLAGS) ctracecmd.i
+ 	$(CC) -fpic -c $(CPPFLAGS) $(CFLAGS) $(PYTHON_INCLUDES)  ctracecmd_wrap.c
+-	$(CC) --shared $(LIBTRACECMD_STATIC) $(LDFLAGS) $(LIBZSTD_LDLAGS) $(ZLIB_LDLAGS) \
+-		ctracecmd_wrap.o -o ctracecmd.so $(TRACE_LIBS)
++	$(CC) --shared $(LIBTRACECMD_STATIC) $(LDFLAGS) \
++		ctracecmd_wrap.o -o ctracecmd.so $(TRACE_LIBS) $(LIBZSTD_LDLAGS) $(ZLIB_LDLAGS)
+ 
+ $(PYTHON_SO_INSTALL): %.install : %.so force
+ 	$(Q)$(call do_install_data,$<,$(python_dir_SQ))
+--- trace-cmd-3.3.orig/python/tracecmd.py
++++ trace-cmd-3.3/python/tracecmd.py
+@@ -1,3 +1,4 @@
++#!/usr/bin/python3
+ #
+ # Copyright (C) International Business Machines  Corp., 2009
+ #
